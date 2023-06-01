@@ -21,7 +21,7 @@ let navlinks = document.querySelectorAll("nav ul li a");
 let sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", function () {
-  const scrolPos = this.window.scrollY;
+  const scrollPos = this.window.scrollY;
   sections.forEach((section) => {
     if (
       scrollPos > section.offsetTop &&
