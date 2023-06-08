@@ -10,7 +10,7 @@ menuBtn.addEventListener("click", function (e) {
 });
 
 var typed = new Typed(".auto-input", {
-  strings: ["Front-End Developer!", "UI Designer!"],
+  strings: ["Front-End Developer!", "Passionate Programmer!"],
   typeSpeed: 100,
   backspeed: 200,
   backDelay: 2000,
