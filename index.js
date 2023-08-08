@@ -1,3 +1,4 @@
+/*hamburger menu*/
 let menuBtn = document.querySelector("#menu-btn");
 
 menuBtn.addEventListener("click", function (e) {
@@ -5,6 +6,7 @@ menuBtn.addEventListener("click", function (e) {
   this.classList.toggle("fa-xmark");
 });
 
+/*typewritter effect */
 var typed = new Typed(".auto-input", {
   strings: [
     "Front-End Developer!",
@@ -17,6 +19,7 @@ var typed = new Typed(".auto-input", {
   loop: true,
 });
 
+/*makes the section we're on active*/
 let navlinks = document.querySelectorAll("nav ul li a");
 let sections = document.querySelectorAll("section");
 
@@ -39,14 +42,36 @@ window.addEventListener("scroll", function () {
   });
 });
 
+/*display web development and email development projects*/
+var tabLinks = document.querySelectorAll(".tab-link");
+var tabContents = document.querySelectorAll(".h");
+
+function openTab(tab) {
+  for (tabLink of tabLinks) {
+    tabLink.classList.remove("active-link");
+  }
+
+  for (tabContent of tabContents) {
+    tabContent.classList.remove("active-tab");
+  }
+
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tab).classList.add("active-tab");
+}
+
+/* carousel with arrows and dots*/
+
+/* For Web development */
 var slideIndex = 1;
 showSlides(slideIndex);
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -65,6 +90,38 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " live";
+}
+
+/* For Emails */
+var emailSlideIndex = 1;
+showEmailSlides(emailSlideIndex);
+
+function emailPlusSlides(n) {
+  showEmailSlides((emailSlideIndex += n));
+}
+
+function currentEmailSlide(n) {
+  showEmailSlides((emailSlideIndex = n));
+}
+
+function showEmailSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-1");
+  var dots = document.getElementsByClassName("dot-1");
+  if (n > slides.length) {
+    emailSlideIndex = 1;
+  }
+  if (n < 1) {
+    emailSlideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" live", "");
+  }
+  slides[emailSlideIndex - 1].style.display = "block";
+  dots[emailSlideIndex - 1].className += " live";
 }
 // Auto Slide   if you need auto slide ,remove the commit "//"
 //var slideIndex = 0;

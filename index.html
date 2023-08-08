@@ -196,11 +196,19 @@
 
 
     
+        <!-- Projects section-->
+
     <section id="projects">
         <div class="container">
         <h1 class="sub-heading">PROJECTS</h1>
         <div class="divider"></div>
         
+        <div class="tab-titles">
+            <button class="tab-link active-link" onclick=" openTab('web-development')">Web Development</button>
+            <button class="tab-link" onclick="openTab('email-development')">Email Development</button>
+        </div>
+
+        <div class="h active-tab" id="web-development">
         <div class="slideshow-container">
            
             <div class="mySlides fade">
@@ -267,17 +275,64 @@
                 </div>
             </div>
         
-        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
-        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
+            <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
         </div>
-    </div>
-        <br>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
         </div>
+   </div>
+
+        <!-- HTML Email projects-->
+        <div class="h" id="email-development">
+        <div class="slideshow-container" >
+            <div class="mySlides-1 fade">
+                <div class="project">
+                    <img src="Images/sailchimp.jpg">
+                    <div class="layer">
+                        <h3>SailChimp</h3>
+                        <p>This website is a company newsletter email template.
+                            (HTML, CSS)</p>
+                        <div class="exter-links">
+                            <a href="https://github.com/Filimon111/SailChimp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://sailchimp-by-filimon.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mySlides-1 fade">
+                <div class="project">
+                    <img src="Images/apple-receipt.jpg">
+                    <div class="layer">
+                         <h3>Apple Receipt</h3>
+                        <p>This website is an apple receipt email template.
+                            (HTML, CSS)</p>
+                        <div class="exter-links">
+                            <a href="https://github.com/Filimon111/Apple-Receipt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://apple-receipt-filimon.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <a class="prev" onclick="emailPlusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+            <a class="next" onclick="emailPlusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
+            
+        </div>
+        <div style="text-align:center">
+            <span class="dot-1" onclick="currentEmailSlide(1)"></span>
+            <span class="dot-1" onclick="currentEmailSlide(2)"></span>
+        </div>
+    </div>
+    </div>
+        <br>
+        
 </div>
     </section>
 
