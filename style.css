@@ -497,9 +497,10 @@ gap: 30px;
 /*phone*/
 @media only screen and (max-width: 650px) { 
     .tab-titles {
-        width: 50%;
+        width: 80%;
     }
 }
+
 .tab-link {
     padding: 20px;
     margin-bottom: 30px;
