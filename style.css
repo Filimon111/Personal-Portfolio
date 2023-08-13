@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 :root{
@@ -186,17 +187,20 @@ main{
 #home{
     height: 100vh;
     width: 100%;
-    background-image: url('Images/6.jpg');
-    background-size: cover;
+    /* background-image: url('Images/6.jpg');
+    background-size: cover; */
+    
     background-attachment: fixed;
     display:flex;
     flex-direction: column;
     justify-content: center;
     padding: 70px;
-    position: relative;
+    position: relative; 
+    /* position: absolute; */
 
 }
-#home::before{
+
+/* #home::before{
     content: '';
     width: 100%;
     height: 100%;
@@ -204,13 +208,24 @@ main{
     position: absolute;
     top: 0;
     left: 0;
+} */
+
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 #home .home-row {
+    
     z-index: 1;
 }
 
 #home .home-row h1 {
+   
     font-size: 60px;
     color: #FFFFFF;
     font-weight: 600;
@@ -480,7 +495,7 @@ gap: 30px;
 }
 
 /*phone*/
-@media only screen and (max-width: 850px) { 
+@media only screen and (max-width: 650px) { 
     .tab-titles {
         width: 50%;
     }
